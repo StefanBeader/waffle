@@ -169,8 +169,12 @@
             </div>
             <div class="about-text">
                 <h1>Waffle Magacin</h1>
-                <p>Mi smo firma koja se bavi proizvodnjom svežih belgijskih vafli i galeta.</p>
-                <p>U našem programu možete naći osam vrsta testa, uključujući proteinsko i posno, slane i slatke vafle.</p>
+                <p>Dobrodošli U Waffle Magacin koji se nalazi na uglu Cara Dušana i Bulevara Cara Lazara.</p>
+                <p>Ovde u Waffle Magacinu vafle su više od obroka. To je ljubav na prvi zalogaj.</p>
+                <p>Specijalizovani smo za slatke i slane Belgijske vafle.</p>
+                <p>Sva hrana je sveže pripremljena sa kvalitetnim sastojcima, posebno odabranim za Vaše potpuno uživanje u hrani.</p>
+                <p>Posetitite nas na našoj adresi, željno Vas očekujemo.</p>
+                <p>Takođe nudimo usluge keteringa za Vaše rođendanske zabave, prijeme...</p>
             </div>
         </div>
     </section>
@@ -178,7 +182,53 @@
         <div class="menu-content">
             <h2>Meni</h2>
             <div class="category">
-                <h3>Slatke waffle</h3>
+                <h3>Bakin kolač</h3>
+                <hr>
+                <ul>
+                    <li class="tooltip">
+                        <span>Naziv</span>
+                        <span class="cena">250 RSD</span>
+                        <span class="tooltiptext">250 RSD</span>
+                    </li>
+                    <li class="tooltip">
+                        <span>Naziv</span>
+                        <span class="cena">250 RSD</span>
+                        <span class="tooltiptext">250 RSD</span>
+                    </li>
+                    <li class="tooltip">
+                        <span>Naziv</span>
+                        <span class="cena">250 RSD</span>
+                        <span class="tooltiptext">250 RSD</span>
+                    </li>
+                    <li class="tooltip">
+                        <span>Naziv</span>
+                        <span class="cena">250 RSD</span>
+                        <span class="tooltiptext">250 RSD</span>
+                    </li>
+                    <li class="tooltip">
+                        <span>Naziv</span>
+                        <span class="cena">250 RSD</span>
+                        <span class="tooltiptext">250 RSD</span>
+                    </li>
+                    <li class="tooltip">
+                        <span>Naziv</span>
+                        <span class="cena">250 RSD</span>
+                        <span class="tooltiptext">250 RSD</span>
+                    </li>
+                    <li class="tooltip">
+                        <span>Naziv</span>
+                        <span class="cena">250 RSD</span>
+                        <span class="tooltiptext">250 RSD</span>
+                    </li>
+                    <li class="tooltip">
+                        <span>Naziv</span>
+                        <span class="cena">250 RSD</span>
+                        <span class="tooltiptext">250 RSD</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Waffle</h3>
                 <hr>
                 <ul>
                     <li><span>Naziv</span><span class="cena">250 RSD</span></li>
@@ -192,21 +242,7 @@
                 </ul>
             </div>
             <div class="category">
-                <h3>Slatke waffle</h3>
-                <hr>
-                <ul>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                </ul>
-            </div>
-            <div class="category">
-                <h3>Slane waffle</h3>
+                <h3>Galete</h3>
                 <hr>
                 <ul>
                     <li><span>Naziv</span><span class="cena">250 RSD</span></li>
