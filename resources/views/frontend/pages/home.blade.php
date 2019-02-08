@@ -188,7 +188,20 @@
                     <li class="tooltip">
                         <span>Naziv</span>
                         <span class="cena">250 RSD</span>
-                        <span class="tooltiptext">250 RSD</span>
+                        <div class="tooltiptext">
+                            <div class="tooltip-image">
+                                <img src="{{ asset('images/1.jpg') }}" alt="">
+                            </div>
+                            <div class="tooltip-price">
+                                <span>350 rsd</span>
+                            </div>
+                            <h4>Naziv</h4>
+                            <div class="ingredients">
+                                <span class="ingredient">Cokolada</span>
+                                <span class="ingredient">Keks</span>
+                                <span class="ingredient">Sladoled</span>
+                            </div>
+                        </div>
                     </li>
                     <li class="tooltip">
                         <span>Naziv</span>

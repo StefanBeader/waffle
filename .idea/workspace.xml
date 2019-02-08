@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bdea2f26-0bae-4daa-b18b-99d3b2c9b60f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/pages/home.blade.php" afterDir="false" />
     </list>
@@ -38,7 +36,8 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -59,49 +58,37 @@
         <counts>
           <entry key="dummy" value="4" />
           <entry key="env" value="6" />
-          <entry key="php" value="840" />
-          <entry key="scss" value="15" />
+          <entry key="php" value="996" />
+          <entry key="scss" value="247" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="6" />
-          <entry key="Blade" value="554" />
+          <entry key="Blade" value="710" />
           <entry key="PHP" value="286" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="SCSS" value="15" />
+          <entry key="SCSS" value="247" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/pages/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="226" column="25" selection-start-line="226" selection-start-column="25" selection-end-line="226" selection-end-column="25" />
-              <folding>
-                <element signature="n#header#0;n#!!top" />
-                <element signature="n#svg#0;n#span#0;n#a#0;n#nav#0;n#header#0;n#!!top" />
-                <element signature="n#section#0;n#main#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="352">
+              <caret line="190" column="47" selection-start-line="190" selection-start-column="36" selection-end-line="190" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-              <folding>
-                <element signature="e#1559#2553#0" />
-                <element signature="e#2564#4130#0" />
-                <element signature="e#6887#7435#0" />
-                <element signature="e#8276#8296#0" />
-                <element signature="e#8309#10205#0" />
-              </folding>
+            <state relative-caret-position="528">
+              <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -140,8 +127,8 @@
         <option value="$PROJECT_DIR$/app/Models/Waffle.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_06_212620_create_ingredients_table.php" />
-        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
         <option value="$PROJECT_DIR$/resources/views/frontend/pages/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
       </list>
     </option>
   </component>
@@ -253,8 +240,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1920" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -298,6 +286,17 @@
               <item name="waffle" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="waffle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="waffle" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="waffle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="waffle" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="waffle" type="b2602c69:ProjectViewProjectNode" />
@@ -386,23 +385,21 @@
       <workItem from="1548618436456" duration="4149000" />
       <workItem from="1549207792737" duration="10530000" />
       <workItem from="1549485937574" duration="4699000" />
+      <workItem from="1549636968764" duration="2310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43464000" />
+    <option name="totallyTimeSpent" value="45774000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <frame x="1920" y="0" width="1920" height="1044" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="npm" order="0" side_tool="true" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.18002136" />
-      <window_info anchor="bottom" id="SonarLint" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="MagicentoScripts" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.18215811" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.3295583" />
@@ -414,11 +411,14 @@
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="GfmBrowser" />
-      <window_info anchor="right" id="Database" order="0" visible="true" weight="0.27724358" />
+      <window_info anchor="bottom" id="SonarLint" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="MagicentoScripts" order="13" side_tool="true" />
+      <window_info anchor="right" id="Database" order="0" visible="true" weight="0.1741453" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="GfmBrowser" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,29 +549,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/pages/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-          <folding>
-            <element signature="e#1559#2553#0" />
-            <element signature="e#2564#4130#0" />
-            <element signature="e#6887#7435#0" />
-            <element signature="e#8276#8296#0" />
-            <element signature="e#8309#10205#0" />
-          </folding>
+        <state relative-caret-position="352">
+          <caret line="190" column="47" selection-start-line="190" selection-start-column="36" selection-end-line="190" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/pages/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="226" column="25" selection-start-line="226" selection-start-column="25" selection-end-line="226" selection-end-column="25" />
-          <folding>
-            <element signature="n#header#0;n#!!top" />
-            <element signature="n#svg#0;n#span#0;n#a#0;n#nav#0;n#header#0;n#!!top" />
-            <element signature="n#section#0;n#main#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="528">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
         </state>
       </provider>
     </entry>
