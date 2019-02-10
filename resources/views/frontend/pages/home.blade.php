@@ -192,10 +192,7 @@
                             <div class="tooltip-image">
                                 <img src="{{ asset('images/1.jpg') }}" alt="">
                             </div>
-                            <div class="tooltip-price">
-                                <span>350 rsd</span>
-                            </div>
-                            <h4>Naziv</h4>
+                            <h4>Sastojci:</h4>
                             <div class="ingredients">
                                 <span class="ingredient">Cokolada</span>
                                 <span class="ingredient">Keks</span>
@@ -289,11 +286,11 @@
                 <h2>Pošaljite nam poruku</h2>
                 <form action="#" id="contact-form">
                     {{ @csrf_field() }}
-                    <input type="text" name="name" placeholder="Vaše Ime">
-                    <input type="email" name="email" placeholder="Vaša E-mail Adressa">
-                    <input type="text" name="message" placeholder="Poruka">
+                    <input type="text" name="name" id="messageName" placeholder="Vaše Ime">
+                    <input type="email" class="required" name="email" id="messageEmail" placeholder="Vaša E-mail Adressa">
+                    <input type="text" class="required" name="content" id="messageContent" placeholder="Poruka">
                 </form>
-                <button type="button" id="sendMessage">Pošalji</button>
+                <button type="submit" id="sendMessage">Pošalji</button>
             </div>
         </div>
         <footer>
@@ -395,3 +392,5 @@
     </section>
     <div id="map"></div>
 </main>
+<div id="success">Uspesno ste poslali poruku</div>
+<div id="error">Desila se greska</div>

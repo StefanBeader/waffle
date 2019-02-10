@@ -14,7 +14,9 @@ class IngredientsController extends Controller
      */
     public function index()
     {
-        //
+        $ingredients = Ingredients::orderBy('updated_at', 'Desc')->paginate(5);
+
+        return view('backend/ingredients/index', compact('ingredients'));
     }
 
     /**
@@ -24,7 +26,7 @@ class IngredientsController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend/ingredients/create');
     }
 
     /**
@@ -35,7 +37,12 @@ class IngredientsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(Ingredients::rules());
+
+        Ingredients::create($request->all());
+
+        return redirect()->to('/ingredients');
+
     }
 
     /**

@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
-class CreateWafflesTable extends Migration
+class CreateFoodTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +14,17 @@ class CreateWafflesTable extends Migration
      */
     public function up()
     {
-        Schema::create('waffles', function (Blueprint $table) {
+        Schema::create('food_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('price');
-            $table->foreign('type_id')->references('id')->on('waffle_types');
             $table->timestamps();
         });
+
+        DB::table('food_types')->insert([
+            ['name' => 'bakin kolač'],
+            ['name' => 'waffle'],
+            ['name' => 'galete']
+        ]);
     }
 
     /**
@@ -29,6 +34,6 @@ class CreateWafflesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('waffles');
+        Schema::dropIfExists('food_types');
     }
 }

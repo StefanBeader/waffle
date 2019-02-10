@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 
-class CreateWaffleTypesTable extends Migration
+class CreateFlavoursTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +14,15 @@ class CreateWaffleTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('waffle_types', function (Blueprint $table) {
+        Schema::create('flavours', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->timestamps();
         });
 
-        DB::table('waffle_types')->insert([
-           ['name' => 'Slatko'],
-           ['name' => 'Slano'],
+        DB::table('flavours')->insert([
+            ['name' => 'slatko'],
+            ['name' => 'slano']
         ]);
     }
 
@@ -33,6 +33,6 @@ class CreateWaffleTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('waffle_types');
+        Schema::dropIfExists('flavours');
     }
 }

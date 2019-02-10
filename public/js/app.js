@@ -1154,9 +1154,59 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.getElementById('sendMessage').addEventListener('click', function (e) {
-    sendMessage().then();
+    e.preventDefault();
+
+    if (!validateForm()) {
+      showMessageResponse('error', 'Niste popunili obavezna polja');
+      return -1;
+    }
+
+    sendMessage().then(function (response) {
+      if (response.status !== 200) {
+        showMessageResponse('error', 'Niste popunili obavezna polja');
+        return -1;
+      }
+
+      document.getElementById('contact-form').reset();
+      showMessageResponse('success', 'Uspešno ste poslali poruku');
+    }).catch(function () {
+      return showMessageResponse('error', 'Desila se greška');
+    });
   });
 });
+
+function validateForm() {
+  var result = true;
+  var list = document.getElementsByClassName("required");
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = list[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var item = _step.value;
+
+      if (item.value == '') {
+        result = false;
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return result;
+}
 
 function changeActiveSection(el, active) {
   active.classList.remove('active');
@@ -1180,12 +1230,17 @@ function _sendMessage() {
   _sendMessage = _asyncToGenerator(
   /*#__PURE__*/
   _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-    var rawResponse, content;
+    var data, rawResponse;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.next = 2;
+            data = {
+              name: document.getElementById('messageName').value,
+              email: document.getElementById('messageEmail').value,
+              content: document.getElementById('messageContent').value
+            };
+            _context.next = 3;
             return fetch('/sendMessage', {
               method: 'POST',
               headers: {
@@ -1194,22 +1249,14 @@ function _sendMessage() {
                 "X-Requested-With": "XMLHttpRequest",
                 'X-CSRF-TOKEN': document.querySelector('meta[name=csrf-token]').getAttribute('content')
               },
-              body: JSON.stringify({
-                a: 1,
-                b: 'Textual content'
-              })
+              body: JSON.stringify(data)
             });
 
-          case 2:
+          case 3:
             rawResponse = _context.sent;
-            _context.next = 5;
-            return rawResponse.json();
+            return _context.abrupt("return", rawResponse);
 
           case 5:
-            content = _context.sent;
-            console.log(content);
-
-          case 7:
           case "end":
             return _context.stop();
         }
@@ -1217,6 +1264,17 @@ function _sendMessage() {
     }, _callee, this);
   }));
   return _sendMessage.apply(this, arguments);
+}
+
+function showMessageResponse() {
+  var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+  var message = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+  var el = document.getElementById(element);
+  el.innerText = message;
+  el.style.display = 'block';
+  setTimeout(function () {
+    return el.style.display = 'none';
+  }, 4000);
 }
 
 /***/ }),
@@ -1264,15 +1322,27 @@ if (el !== null) {
 
 /***/ }),
 
+/***/ "./resources/sass/backend.scss":
+/*!*************************************!*\
+  !*** ./resources/sass/backend.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!*******************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/backend.scss ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/nikola/code/waffle/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/nikola/code/waffle/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Projects\waffle\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\Projects\waffle\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! D:\Projects\waffle\resources\sass\backend.scss */"./resources/sass/backend.scss");
 
 
 /***/ })

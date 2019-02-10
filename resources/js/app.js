@@ -21,9 +21,36 @@ document.addEventListener("DOMContentLoaded", function() {
     }, false);
   }
   document.getElementById('sendMessage').addEventListener('click', (e) => {
-    sendMessage().then();
+    e.preventDefault();
+
+    if (!validateForm()) {
+      showMessageResponse('error', 'Niste popunili obavezna polja');
+      return -1;
+    }
+
+    sendMessage()
+      .then( response => {
+        if (response.status !== 200) {
+          showMessageResponse('error', 'Niste popunili obavezna polja');
+          return -1;
+        }
+        document.getElementById('contact-form').reset();
+        showMessageResponse('success', 'Uspešno ste poslali poruku');
+      } )
+      .catch( () => showMessageResponse('error', 'Desila se greška') );
   });
 });
+
+function validateForm() {
+  let result = true;
+  let list = document.getElementsByClassName("required");
+  for (let item of list) {
+    if (item.value == '') {
+      result = false;
+    }
+  }
+  return result;
+}
 
 function changeActiveSection(el, active) {
   active.classList.remove('active');
@@ -40,6 +67,13 @@ function scrollIt(id) {
 }
 
 async function sendMessage() {
+
+  const data = {
+      name: document.getElementById('messageName').value,
+      email: document.getElementById('messageEmail').value,
+      content: document.getElementById('messageContent').value
+  }
+
   const rawResponse = await fetch('/sendMessage', {
     method: 'POST',
     headers: {
@@ -48,9 +82,14 @@ async function sendMessage() {
       "X-Requested-With": "XMLHttpRequest",
       'X-CSRF-TOKEN': document.querySelector('meta[name=csrf-token]').getAttribute('content')
     },
-    body: JSON.stringify({a: 1, b: 'Textual content'})
+    body: JSON.stringify(data)
   });
-  const content = await rawResponse.json();
+  return rawResponse;
+}
 
-  console.log(content);
+function showMessageResponse(element = '', message = '') {
+  let el = document.getElementById(element);
+  el.innerText = message;
+  el.style.display = 'block';
+  setTimeout( () => el.style.display = 'none', 4000);
 }

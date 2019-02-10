@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    /**
+     * Show the application Home page.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
-        return view('frontend.pages.home');
-    }
-
-    public function sendMessage(Request $request)
-    {
-        var_dump($request->all());
+        return view('frontend/pages/home');
     }
 }

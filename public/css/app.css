@@ -384,6 +384,30 @@ template {
   padding: 0;
 }
 
+#success {
+  position: fixed;
+  top: 50px;
+  border-radius: 6px;
+  right: 50px;
+  background-color: #38c172;
+  color: white;
+  padding: 10px 15px;
+  z-index: 100;
+  display: none;
+}
+
+#error {
+  position: fixed;
+  top: 50px;
+  border-radius: 6px;
+  right: 50px;
+  background-color: #DA291C;
+  color: white;
+  padding: 10px 15px;
+  z-index: 100;
+  display: none;
+}
+
 /* Tooltip container */
 
 .tooltip {
@@ -422,21 +446,35 @@ template {
 .tooltip .tooltiptext .tooltip-price {
   grid-column: 3/5;
   grid-row: 1/2;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
-.tooltip .tooltiptext h3 {
+.tooltip .tooltiptext .tooltip-price span {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: #DA291C;
+  color: #FFC72C;
+  border-radius: 50%;
+}
+
+.tooltip .tooltiptext h4 {
   grid-column: 1/5;
-  grid-row: 4/5;
+  grid-row: 3/4;
+  margin-top: 10px;
 }
 
 .tooltip .tooltiptext .ingredients {
   grid-column: 1/5;
   grid-row: 4/5;
+  margin: 10px 0;
 }
 
 .tooltip .tooltiptext .ingredients .ingredient {
-  background: #DA291C;
-  padding: 10px 15px;
   display: inline-block;
 }
 

@@ -1,0 +1,148 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-select/sass/bootstrap-select';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+@mixin button() {
+  border: 1px solid white;
+  border-radius: 6px;
+  margin-top: 15px;
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+  color: white;
+  text-decoration: none;
+  transition: background-color .3s, color .3s;
+  &:hover {
+    background-color: white;
+    color: $blue;
+  }
+}
+
+.cols2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 100vh;
+
+  aside {
+    background-color: $blue;
+    padding: 0 30px;
+    .logo {
+      margin-top: 30px;
+      a {
+        display: block;
+        color: white;
+        font-size: 34px;
+        font-weight: bold;
+      }
+    }
+
+    .user {
+      margin-top: 30px;
+      .avatar {
+        border: 2px solid white;
+        border-radius: 6px;
+        padding: 30px;
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+      h4 {
+        color: white;
+        text-align: center;
+        margin-top: 15px;
+      }
+
+      .user-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 15px;
+
+        a {
+          @include button;
+        }
+      }
+    }
+
+    nav {
+      margin-top: 30px;
+      height: auto;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          a {
+            @include button;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    padding: 30px 50px;
+
+    .message {
+      span {
+        font-weight: bold;
+      }
+    }
+
+    hr {
+      margin: 30px 0;
+    }
+
+    .table {
+      margin-top: 30px;
+    }
+
+    .waffle-form {
+      margin-top: 30px;
+      width: 50%;
+    }
+
+    .pagination {
+      margin-top: 30px;
+    }
+
+    form {
+      label {
+        font-weight: bold;
+      }
+
+      input[type=submit] {
+        margin-top: 30px;
+      }
+
+      .btn-light {
+        background-color: white;
+        border-color: #ced4da;
+      }
+      .form-control-file {
+        height: calc(2.19rem + 2px);
+        background: white;
+        border: 1px solid #ced4da;
+        font-size: 18px;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+}
