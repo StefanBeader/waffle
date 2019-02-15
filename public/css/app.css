@@ -408,6 +408,10 @@ template {
   display: none;
 }
 
+[data-flavourId="2"] {
+  display: none;
+}
+
 /* Tooltip container */
 
 .tooltip {
@@ -498,6 +502,10 @@ template {
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
+
+.tooltip:hover {
+  cursor: pointer;
+}
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
@@ -706,8 +714,8 @@ header nav ul li a.active {
   position: relative;
   width: 66.67em;
   display: grid;
-  grid-template-rows: -webkit-max-content -webkit-max-content;
-  grid-template-rows: max-content max-content;
+  grid-template-rows: repeat(3, -webkit-max-content);
+  grid-template-rows: repeat(3, max-content);
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 60px;
@@ -719,8 +727,23 @@ header nav ul li a.active {
   grid-column: 1/4;
 }
 
-.section.menu .menu-content .category {
+.section.menu .menu-content .menu-buttons {
+  grid-column: 1/4;
   grid-row: 2/3;
+  text-align: center;
+}
+
+.section.menu .menu-content .menu-buttons .menu-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 10px 15px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.section.menu .menu-content .category {
+  grid-row: 3/4;
   border: 1px solid white;
   padding: 50px 30px;
 }

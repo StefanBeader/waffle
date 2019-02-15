@@ -12,4 +12,9 @@ class FoodType extends Model
     const BAKIN_KOLAC = 1;
     const WAFFLE = 2;
     const GALETE = 3;
+
+    public static function getNameByid($id)
+    {
+        return ucwords(static::find($id)->name);
+    }
 }

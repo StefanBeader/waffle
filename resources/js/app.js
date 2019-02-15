@@ -39,6 +39,19 @@ document.addEventListener("DOMContentLoaded", function() {
       } )
       .catch( () => showMessageResponse('error', 'Desila se greška') );
   });
+
+  const classnameMenu = document.querySelectorAll(".menu-btn");
+  let activeMenuType = classnameMenu[0];
+  for (let i = 0; i < classnameMenu.length; i++) {
+    classnameMenu[i].addEventListener('click', (e) => {
+
+      if (e.target.classList.contains('salty')) {
+        changeMenuFlavour(2);
+      } else {
+        changeMenuFlavour(1);
+      }
+    }, false);
+  }
 });
 
 function validateForm() {
@@ -92,4 +105,16 @@ function showMessageResponse(element = '', message = '') {
   el.innerText = message;
   el.style.display = 'block';
   setTimeout( () => el.style.display = 'none', 4000);
+}
+
+function changeMenuFlavour(id) {
+  let itemsToHide = document.querySelectorAll(`.category`);
+  for (const item of itemsToHide) {
+    item.style.display = 'none';
+  }
+
+  let itemsToShow = document.querySelectorAll(`[data-flavourId="${id}"]`);
+  for (const item of itemsToShow) {
+    item.style.display = 'block';
+  }
 }

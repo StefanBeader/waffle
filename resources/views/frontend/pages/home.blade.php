@@ -181,92 +181,39 @@
     <section id="menu" class="menu section">
         <div class="menu-content">
             <h2>Meni</h2>
-            <div class="category">
-                <h3>Bakin kolač</h3>
-                <hr>
-                <ul>
-                    <li class="tooltip">
-                        <span>Naziv</span>
-                        <span class="cena">250 RSD</span>
-                        <div class="tooltiptext">
-                            <div class="tooltip-image">
-                                <img src="{{ asset('images/1.jpg') }}" alt="">
-                            </div>
-                            <h4>Sastojci:</h4>
-                            <div class="ingredients">
-                                <span class="ingredient">Cokolada</span>
-                                <span class="ingredient">Keks</span>
-                                <span class="ingredient">Sladoled</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="tooltip">
-                        <span>Naziv</span>
-                        <span class="cena">250 RSD</span>
-                        <span class="tooltiptext">250 RSD</span>
-                    </li>
-                    <li class="tooltip">
-                        <span>Naziv</span>
-                        <span class="cena">250 RSD</span>
-                        <span class="tooltiptext">250 RSD</span>
-                    </li>
-                    <li class="tooltip">
-                        <span>Naziv</span>
-                        <span class="cena">250 RSD</span>
-                        <span class="tooltiptext">250 RSD</span>
-                    </li>
-                    <li class="tooltip">
-                        <span>Naziv</span>
-                        <span class="cena">250 RSD</span>
-                        <span class="tooltiptext">250 RSD</span>
-                    </li>
-                    <li class="tooltip">
-                        <span>Naziv</span>
-                        <span class="cena">250 RSD</span>
-                        <span class="tooltiptext">250 RSD</span>
-                    </li>
-                    <li class="tooltip">
-                        <span>Naziv</span>
-                        <span class="cena">250 RSD</span>
-                        <span class="tooltiptext">250 RSD</span>
-                    </li>
-                    <li class="tooltip">
-                        <span>Naziv</span>
-                        <span class="cena">250 RSD</span>
-                        <span class="tooltiptext">250 RSD</span>
-                    </li>
-                </ul>
+            <div class="menu-buttons">
+                <button class="menu-btn sweet">Slatko</button>
+                <button class="menu-btn salty">Slano</button>
             </div>
-            <div class="category">
-                <h3>Waffle</h3>
-                <hr>
-                <ul>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                </ul>
-            </div>
-            <div class="category">
-                <h3>Galete</h3>
-                <hr>
-                <ul>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                    <li><span>Naziv</span><span class="cena">250 RSD</span></li>
-                </ul>
-            </div>
+            @foreach($menu as $flavourKey => $flavour)
+                @foreach($flavour as $key => $category)
+                    <div class="category" data-flavourId="{{ $flavourKey }}">
+                    <h3>{{ \App\Models\FoodType::getNameByid($key) }}</h3>
+                    <hr>
+                    <ul>
+                        @foreach($category as $item)
+                            <li class="tooltip">
+                                <span>{{ $item->name }}</span>
+                                <span class="cena">{{ $item->price }} RSD</span>
+                                <div class="tooltiptext">
+                                    <div class="tooltip-image">
+                                        @if(file_exists(public_path('images/menu-items/' . $item->id . '.jpg')))
+                                            <img src="{{ asset('images/menu-items/' . $item->id . '.jpg') }}" alt="">
+                                        @endif
+                                    </div>
+                                    <h4>Sastojci:</h4>
+                                    <div class="ingredients">
+                                        @foreach($item->ingredients as $ingredient)
+                                            <span class="ingredient">{{ $ingredient->name }}</span>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endforeach
+            @endforeach
         </div>
     </section>
     <section id="contact" class="contact section">
