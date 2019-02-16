@@ -10,6 +10,7 @@ trait SelectOptions {
         static::all()->each(function ($el) use (&$options) {
             return $options[$el->id] = ucwords($el->name);
         });
+        sort($options);
         return $options;
     }
 }

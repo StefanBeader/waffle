@@ -37,7 +37,7 @@
 
         <div class="form-group">
             <label for="">Sastojci</label>
-            {{ Form::select('ingredients[]', $ingredients, $food->getIngredientsId(), ['class' => 'form-control selectpicker', 'multiple'=>'multiple']) }}
+            {{ Form::select('ingredients[]', $ingredients, $food->getIngredientsId(), ['class' => 'form-control selectpicker', 'data-live-search' => 'true', 'multiple'=>'multiple']) }}
         </div>
 
         <div class="form-group">
