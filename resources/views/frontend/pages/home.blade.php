@@ -252,7 +252,7 @@
                     <h4>E-mail</h4>
                     <p>waffle.magacin@gmail.com</p>
                     <h4>Telefon</h4>
-                    <p>063592961</p>
+                    <p>060 543 3463</p>
                 </div>
                 <div class="social-media">
                     <h4>Socijalne mreže</h4>
