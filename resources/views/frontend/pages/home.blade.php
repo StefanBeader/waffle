@@ -1,5 +1,6 @@
 @extends('frontend.layouts.pages')
 
+@section('page')
 <header>
     <nav>
         <a class="show-small link" data-scroll="about" href="">
@@ -304,3 +305,4 @@
 </main>
 <div id="success">Uspesno ste poslali poruku</div>
 <div id="error">Desila se greska</div>
+@endsection
