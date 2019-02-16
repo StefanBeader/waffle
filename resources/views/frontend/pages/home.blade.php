@@ -250,7 +250,7 @@
                 </div>
                 <div>
                     <h4>E-mail</h4>
-                    <p>waffle.magacin@gmail.com</p>
+                    <p>wafflemagacin@gmail.com</p>
                     <h4>Telefon</h4>
                     <p>060 543 3463</p>
                 </div>
