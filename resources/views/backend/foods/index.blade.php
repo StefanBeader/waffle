@@ -1,8 +1,10 @@
 @extends('backend.layouts.master')
 
 @section('main')
-    <h1>Meni</h1>
-    <hr>
+    <div>
+        <h1>Meni</h1>
+        <a href="{{ URL::to('/food/create') }}" class="btn btn-primary">Dodaj</a>
+    </div>
 
     <table class="table table-striped">
         <thead>
