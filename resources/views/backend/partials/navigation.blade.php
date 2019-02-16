@@ -44,7 +44,7 @@
         </div>
         <h4>Dobrodošli {{ Auth::user()->name }}</h4>
         <div class="user-actions">
-            <a href="{{ URL::to('/users/' . Auth::user()->id) }}">Nalog</a>
+            {{--<a href="{{ URL::to('/users/' . Auth::user()->id) }}">Nalog</a>--}}
             <a href="{{ URL::to('/logout') }}">Logout</a>
         </div>
     </div>
@@ -53,7 +53,7 @@
             <li><a href="{{ URL::to('/food') }}">Hrana</a></li>
             <li><a href="{{ URL::to('/ingredients') }}">Sastojci</a></li>
             <li><a href="{{ URL::to('/messages') }}">Poruke</a></li>
-            <li><a href="{{ '/information' }}">Podaci</a></li>
+            {{--<li><a href="{{ '/information' }}">Podaci</a></li>--}}
         </ul>
     </nav>
 </div>

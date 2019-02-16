@@ -1404,9 +1404,9 @@ if (el !== null) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Projects\waffle\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\Projects\waffle\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! D:\Projects\waffle\resources\sass\backend.scss */"./resources/sass/backend.scss");
+__webpack_require__(/*! /home/nikola/code/waffle/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /home/nikola/code/waffle/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /home/nikola/code/waffle/resources/sass/backend.scss */"./resources/sass/backend.scss");
 
 
 /***/ })

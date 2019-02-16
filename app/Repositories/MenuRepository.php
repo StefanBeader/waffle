@@ -17,7 +17,7 @@ class MenuRepository {
         $slatkeGalete = [];
         $slaneGalete = [];
 
-        $food = Food::orderBy('id', 'Desc')->with(['ingredients'])->get();
+        $food = Food::where('is_active', true)->orderBy('id', 'Desc')->with(['ingredients'])->get();
 
         list($sweet, $salty) = $food->partition(function ($i) {
             return $i->flavour_id === 1;

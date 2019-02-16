@@ -910,6 +910,10 @@ header nav ul li a.active {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.section.contact footer h4 {
+  margin-bottom: 10px;
+}
+
 .section.contact footer .social-icons {
   display: inline-block;
   margin-right: 15px;

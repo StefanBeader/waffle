@@ -84,7 +84,12 @@ class FoodController extends Controller
      */
     public function edit(Food $food)
     {
-        //
+
+        $ingredients = Ingredients::selectOptions();
+        $flavour = Flavour::selectOptions();
+        $foodType = FoodType::selectOptions();
+
+        return view('backend/foods/edit', compact('food', 'flavour', 'foodType', 'ingredients'));
     }
 
     /**
@@ -96,7 +101,24 @@ class FoodController extends Controller
      */
     public function update(Request $request, Food $food)
     {
-        //
+        $request->validate(Food::rules(true));
+
+        if (empty($request->ingredients)) {
+            return redirect()->back()->with(['error' => 'Fale sastojci']);
+        }
+
+        DB::transaction(function() use ($request, $food) {
+            $food->update($request->except(['ingredients', 'image']));
+
+            $food->ingredients()->sync($request->ingredients);
+
+            if ($request->file('image')) {
+                $uploadImage = new UploadImage($request->file('image'), 'images/menu-items/' . $food->id);
+                $uploadImage->upload();
+            }
+        });
+
+        return redirect()->to('/food');
     }
 
     /**

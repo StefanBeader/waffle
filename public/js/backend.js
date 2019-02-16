@@ -39348,7 +39348,7 @@ if (token) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Projects\waffle\resources\js\backend.js */"./resources/js/backend.js");
+module.exports = __webpack_require__(/*! /home/nikola/code/waffle/resources/js/backend.js */"./resources/js/backend.js");
 
 
 /***/ })

@@ -31,6 +31,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/food', 'FoodController@index');
     Route::get('/food/create', 'FoodController@create');
     Route::post('/food', 'FoodController@store');
+    Route::get('/food/{food}/edit', 'FoodController@edit');
+    Route::put('/food/{food}', 'FoodController@update');
 
     Route::get('/ingredients', 'IngredientsController@index');
     Route::get('/ingredients/create', 'IngredientsController@create');

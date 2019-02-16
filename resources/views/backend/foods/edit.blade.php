@@ -7,17 +7,17 @@
     @include('backend.partials.errors')
 
     <div class="waffle-form">
-        {{ Form::open(['url' => '/food', 'file' => true, 'enctype' => 'multipart/form-data']) }}
+        {{ Form::open(['url' => '/food/' . $food->id, 'method' => 'PUT', 'file' => true, 'enctype' => 'multipart/form-data']) }}
 
         <div class="form-group">
             <label for="">Naziv</label>
-            {{ Form::text('name', '', ['class' => 'form-control']) }}
+            {{ Form::text('name', $food->name, ['class' => 'form-control']) }}
         </div>
 
         <div class="form-group">
             <label for="">Cena</label>
             <div class="input-group">
-                {{ Form::number('price', '', ['class' => 'form-control']) }}
+                {{ Form::number('price', $food->price, ['class' => 'form-control']) }}
                 <div class="input-group-append">
                     <span class="input-group-text" id="basic-addon2">RSD</span>
                 </div>
@@ -26,18 +26,18 @@
         <div class="cols2">
             <div class="form-group">
                 <label for="">Vrsta</label>
-                {{ Form::select('food_type_id', $foodType, '', ['class' => 'form-control selectpicker']) }}
+                {{ Form::select('food_type_id', $foodType, $food->food_type_id, ['class' => 'form-control selectpicker']) }}
             </div>
 
             <div class="form-group">
                 <label for="">Ukus</label>
-                {{ Form::select('flavour_id', $flavour, '', ['class' => 'form-control selectpicker']) }}
+                {{ Form::select('flavour_id', $flavour, $food->flavour_id, ['class' => 'form-control selectpicker']) }}
             </div>
         </div>
 
         <div class="form-group">
             <label for="">Sastojci</label>
-            {{ Form::select('ingredients[]', $ingredients, '', ['class' => 'form-control selectpicker', 'multiple'=>'multiple']) }}
+            {{ Form::select('ingredients[]', $ingredients, $food->getIngredientsId(), ['class' => 'form-control selectpicker', 'multiple'=>'multiple']) }}
         </div>
 
         <div class="form-group">
@@ -47,7 +47,7 @@
 
         <div class="form-group">
             <label for="">Aktivno</label>
-            {{ Form::select('is_active', [0 => 'Ne', 1 => 'Da'], '0', ['class' => 'form-control selectpicker']) }}
+            {{ Form::select('is_active', [0 => 'Ne', 1 => 'Da'], $food->is_active, ['class' => 'form-control selectpicker']) }}
         </div>
 
         {{ Form::submit('Sačuvaj', ['class' => 'btn btn-primary']) }}

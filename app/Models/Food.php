@@ -8,8 +8,15 @@ class Food extends Model
 {
     protected $guarded = [];
 
-    public static function rules()
+    public static function rules($update = false)
     {
+        if ($update) {
+            return [
+                'name' => 'required|max:255|string',
+                'price' => 'required|numeric',
+            ];
+        }
+
         return [
             'name' => 'required|max:255|string|unique:foods',
             'price' => 'required|numeric',
@@ -40,5 +47,10 @@ class Food extends Model
             $string .= $el->name . ', ';
         });
         return rtrim($string, ', ');
+    }
+
+    public function getIngredientsId()
+    {
+        return $test = $this->ingredients()->get()->pluck('id')->toArray();
     }
 }
