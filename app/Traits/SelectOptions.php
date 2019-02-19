@@ -10,7 +10,12 @@ trait SelectOptions {
         static::all()->each(function ($el) use (&$options) {
             return $options[$el->id] = ucwords($el->name);
         });
-        sort($options);
+        uasort($options, function ($a, $b) {
+            if ($a == $b) {
+                return 0;
+            }
+            return ($a < $b) ? -1 : 1;
+        });
         return $options;
     }
 }
